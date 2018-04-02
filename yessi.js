@@ -1,4 +1,3 @@
-
 var addButton = document.getElementById('submitItem');
 
 var list = document.getElementById("list");
@@ -8,10 +7,18 @@ var list = document.getElementById("list");
 
 function addItem() {
     var input = document.getElementById("Items").value;
-        var item = document.createElement("li");
-            item.textcontent = input;
+    var item = document.createElement("li");
+    item.textcontent = input;
     list.appendChild(item);
 }
-var deleteItem = document.createElement("button");
+var remove = document.createElement("button");
 deleteItem.textcontext = "Delete";
-item.appendChild(item);
+item.appendChild(remove);
+
+
+function deleteItem() {
+    remove.parentNode.remove();
+}
+remove.addEventListener('click', deleteItem);
+}
+addButton.addEventListener('click', addItem);
