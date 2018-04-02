@@ -8,10 +8,10 @@ var list = document.getElementById("list");
 function addItem() {
     var input = document.getElementById("Items").value;
     var item = document.createElement("li");
-    item.textcontent = input;
+    item.textContent = input;
     list.appendChild(item);
 var remove = document.createElement("button");
-deleteItem.textcontext = "Delete";
+remove.textContext = "Delete";
 item.appendChild(remove);
 
 
