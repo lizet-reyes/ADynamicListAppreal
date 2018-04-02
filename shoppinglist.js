@@ -1,21 +1,23 @@
 var addButton = document.getElementById('submitItem');
-var deleteButton = document.getElementById('deleteItem');
 
+var list = document.getElementById("list");
 
 
 
 
 function addItem() {
-    var list = document.getElementById("list");
-    var input = document.getElementById("Items");
-        var item = document.createElement("li");
-            item.textcontent = input;
+    var input = document.getElementById("Items").value;
+    var item = document.createElement("li");
+    item.textcontent = input;
     list.appendChild(item);
-}
+var remove = document.createElement("button");
+deleteItem.textcontext = "Delete";
+item.appendChild(remove);
 
-function deleteItem(){
-    var list = document.getElementById("list");
-    var input = document.getElementById("Items");
-    var item = document.getElementById(input.value);
-    list.removeChild(item);
+
+function deleteItem() {
+    remove.parentNode.remove();
 }
+remove.addEventListener('click', deleteItem)
+}
+addButton.addEventListener('click', addItem);
